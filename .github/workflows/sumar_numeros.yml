@@ -1,0 +1,17 @@
+name: Sumar Numeros
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sumar:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Código
+      uses: actions/checkout@v2
+
+    - name: Sumar Numeros
+      run: echo $((5 + 3))
